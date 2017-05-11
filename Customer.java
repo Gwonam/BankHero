@@ -2,7 +2,7 @@
 public class Customer {
 	private String name;
 	private long idNr;
-	private static int customerNrCount = 1000;
+	private static int customerNrCount = 100;
 	private int customerNr;
 	
 	
