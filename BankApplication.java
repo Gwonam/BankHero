@@ -77,7 +77,10 @@ public class BankApplication {
 
 			case 8: // skriv ut konton
 				System.out.println("val: 8");
-				System.out.println(bank.getAllAccounts());
+				for (BankAccount a : bank.getAllAccounts()) {
+					System.out.println(a);
+				}
+				scan.next();
 				break;
 
 			case 9: // avsluta
