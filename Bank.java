@@ -19,7 +19,12 @@ public class Bank {
 	}
 
 	public Customer findHolder(long idNr) {
-
+		for (BankAccount a : accounts) {
+			if (a.getHolder().getIdNr() == idNr) {
+				return a.getHolder();
+			}
+		}
+		return null;
 	}
 
 	public boolean removeAccount(int number) {
@@ -40,7 +45,12 @@ public class Bank {
 	}
 
 	public BankAccount findByNumber(int accountNumber) {
-
+		for (BankAccount a : accounts) {
+			if (a.getAccountNumber() == accountNumber) {
+				return a;
+			}
+		}
+		return null;
 	}
 
 	public ArrayList<BankAccount> findAccountsForHolder(long idNr) {
