@@ -36,7 +36,12 @@ public class BankApplication {
 				int i4 = scan.nextInt();
 				BankAccount a4 = bank.findByNumber(i4);
 				double out = scan.nextDouble();
-				a4.withdraw(out);
+				if (a4.getAmount() >= out) {
+					a4.withdraw(out);
+				}
+				else {
+					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+				}
 				break;
 
 			case 5: // överföring
@@ -46,8 +51,13 @@ public class BankApplication {
 				i5 = scan.nextInt();
 				BankAccount A5 = bank.findByNumber(i5);
 				double trade = scan.nextDouble();
-				a5.withdraw(trade);
-				A5.deposit(trade);
+				if (a5.getAmount() >= trade) {
+					a5.withdraw(trade);
+					A5.deposit(trade);
+				}
+				else {
+					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+				}
 				break;
 
 			case 6: // skapa konto
