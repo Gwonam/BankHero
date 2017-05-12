@@ -54,11 +54,23 @@ public class Bank {
 	}
 
 	public ArrayList<BankAccount> findAccountsForHolder(long idNr) {
-
+		ArrayList<BankAccount> foundAccounts = new ArrayList<BankAccount>();
+		for (BankAccount a : accounts) {
+			if (a.getHolder().getIdNr() == idNr) {
+				foundAccounts.add(a);
+			}
+		}
+		return foundAccounts;
 	}
 
 	public ArrayList<Customer> findByPartofName(String namePart) {
-
+		ArrayList<Customer> foundCustomers = new ArrayList<Customer>();
+		for (BankAccount a : accounts) {
+			if (a.getHolder().getName().toLowerCase().contains(namePart.toLowerCase())) {
+				foundCustomers.add(a.getHolder());
+			}
+		}
+		return foundCustomers;
 	}
 
 }
