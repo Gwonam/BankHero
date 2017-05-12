@@ -4,7 +4,7 @@ public class Bank {
 	private ArrayList<BankAccount> accounts;
 
 	public Bank() {
-
+		accounts = new ArrayList<BankAccount>();
 	}
 
 	public int addAccount(String holderName, long idNr) {
