@@ -13,15 +13,15 @@ public class Customer {
 		customerNr = customerNrCount;
 	}
 	
-	String getName() {
+	public String getName() {
 		return name;
 	}
 	
-	long getIdNr() {
+	public long getIdNr() {
 		return idNr;
 	}
 	
-	int getCustomerNr() {
+	public int getCustomerNr() {
 		return customerNr;
 	}
 	

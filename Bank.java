@@ -15,6 +15,14 @@ public class Bank {
 			addThisAccount = new BankAccount(findHolder(idNr));
 		}
 		accounts.add(addThisAccount);
+		
+		for (int i = 0; i < accounts.size() - 1; i++) {
+			if (accounts.get(i).getHolder().getName().compareTo(accounts.get(i+1).getHolder().getName()) > 0) {
+				accounts.set(i+1, accounts.set(i, accounts.get(i+1)));
+				i = 0;
+			}
+		}
+		
 		return addThisAccount.getAccountNumber();
 	}
 
@@ -63,7 +71,7 @@ public class Bank {
 		return foundAccounts;
 	}
 
-	public ArrayList<Customer> findByPartofName(String namePart) {
+	public ArrayList<Customer> findByPartOfName(String namePart) {
 		ArrayList<Customer> foundCustomers = new ArrayList<Customer>();
 		for (BankAccount a : accounts) {
 			if (a.getHolder().getName().toLowerCase().contains(namePart.toLowerCase())) {

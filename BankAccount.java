@@ -3,7 +3,7 @@ public class BankAccount {
 
 	private double balance;
 	private Customer holder;
-	private static int accountNrCount;
+	private static int accountNrCount = 1000;
 	private int accountNr;
 
 	public BankAccount(String holderName, long holderId) {
@@ -30,7 +30,7 @@ public class BankAccount {
 		return accountNr;
 	}
 
-	public double getAmmount() {
+	public double getAmount() {
 		return balance;
 	}
 
