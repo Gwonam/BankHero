@@ -1,14 +1,13 @@
 
 public class BankAccount {
 
-	private double balance;
+	private double balance = 0;
 	private Customer holder;
 	private static int accountNrCount = 1000;
 	private int accountNr;
 
 	public BankAccount(String holderName, long holderId) {
 		holder = new Customer(holderName, holderId);
-		balance = 0;
 		accountNrCount++;
 		accountNr = accountNrCount;
 

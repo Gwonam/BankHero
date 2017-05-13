@@ -26,7 +26,7 @@ public class Bank {
 		return addThisAccount.getAccountNumber();
 	}
 
-	public Customer findHolder(long idNr) {
+	private Customer findHolder(long idNr) {
 		for (BankAccount a : accounts) {
 			if (a.getHolder().getIdNr() == idNr) {
 				return a.getHolder();
