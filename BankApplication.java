@@ -28,6 +28,10 @@ public class BankApplication {
 				System.out.println("val: 3");
 				int i3 = scan.nextInt();
 				BankAccount a3 = bank.findByNumber(i3);
+				if (a3 == null) {
+					System.out.println("Kontot existerar inte.");
+					break;
+				}
 				double in = scan.nextDouble();
 				a3.deposit(in);
 				break;
@@ -36,6 +40,10 @@ public class BankApplication {
 				System.out.println("val: 4");
 				int i4 = scan.nextInt();
 				BankAccount a4 = bank.findByNumber(i4);
+				if (a4 == null) {
+					System.out.println("Kontot existerar inte.");
+					break;
+				}
 				double out = scan.nextDouble();
 				if (a4.getAmount() >= out) {
 					a4.withdraw(out);
@@ -49,8 +57,16 @@ public class BankApplication {
 				System.out.println("val: 5");
 				int i5 = scan.nextInt();
 				BankAccount a5 = bank.findByNumber(i5);
+				if (a5 == null) {
+					System.out.println("Kontot existerar inte.");
+					break;
+				}
 				i5 = scan.nextInt();
 				BankAccount A5 = bank.findByNumber(i5);
+				if (A5 == null) {
+					System.out.println("Kontot existerar inte.");
+					break;
+				}
 				double trade = scan.nextDouble();
 				if (a5.getAmount() >= trade) {
 					a5.withdraw(trade);
@@ -93,7 +109,7 @@ public class BankApplication {
 
 	}
 
-	static void menu() {
+	private static void menu() {
 		System.out.println("1. Hitta konto utifrån innehavare");
 		System.out.println("2. Sök kontoinnehavare utifrån (del av) namn");
 		System.out.println("3. Sätt in");
@@ -106,7 +122,7 @@ public class BankApplication {
 
 	}
 	
-	static void createSomeUsers(Bank bank) {
+	private static void createSomeUsers(Bank bank) {
 		bank.addAccount("Person Ett", 123456);
 		bank.addAccount("Arvid Åkerblom", 911111111);
 		bank.addAccount("Douglas Algotsson", 1111111111);
