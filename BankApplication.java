@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
-public class BankApplication {
-	private static Scanner scan = new Scanner(System.in);
+public class BankApplication { 
 
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
 		Bank bank = new Bank();
+		createSomeUsers(bank);
 		boolean condition = true;
 		while (condition) {
 			menu();
@@ -80,7 +81,6 @@ public class BankApplication {
 				for (BankAccount a : bank.getAllAccounts()) {
 					System.out.println(a);
 				}
-				scan.next();
 				break;
 
 			case 9: // avsluta
@@ -104,6 +104,13 @@ public class BankApplication {
 		System.out.println("8. Skriv ut konton");
 		System.out.println("9. Avsluta");
 
+	}
+	
+	static void createSomeUsers(Bank bank) {
+		bank.addAccount("Person Ett", 123456);
+		bank.addAccount("Arvid Åkerblom", 911111111);
+		bank.addAccount("Douglas Algotsson", 1111111111);
+		
 	}
 
 }
