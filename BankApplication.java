@@ -59,8 +59,7 @@ public class BankApplication {
 				if (a4.getAmount() >= out) {
 					a4.withdraw(out);
 				} else {
-					System.out
-							.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
 				}
 				System.out.println();
 				break;
@@ -83,13 +82,14 @@ public class BankApplication {
 					System.out.println();
 					break;
 				}
+				System.out.println("belopp: ");
 				double trade = scan.nextDouble();
 				if (a5.getAmount() >= trade) {
 					a5.withdraw(trade);
 					A5.deposit(trade);
+					System.out.println("Du har flyttat " + trade + "kr från konto " + a5.getAccountNumber() + " till konto " + A5.getAccountNumber() + ".");
 				} else {
-					System.out
-							.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
 				}
 				System.out.println();
 				break;
@@ -102,8 +102,7 @@ public class BankApplication {
 				System.out.println("id: ");
 				System.out.println("Skriv in ditt id: ");
 				long l6 = scan.nextLong();
-				bank.addAccount(c6, l6);
-				System.out.println("Ditt konto är nu skapat, du har kontonummer: " + BankAccount.accountNrCount);
+				System.out.println("Ditt konto är nu skapat, du har kontonummer: " + bank.addAccount(c6, l6));
 				System.out.println();
 				break;
 
