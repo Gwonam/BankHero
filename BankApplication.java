@@ -59,7 +59,8 @@ public class BankApplication {
 				if (a4.getAmount() >= out) {
 					a4.withdraw(out);
 				} else {
-					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+					System.out
+							.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
 				}
 				System.out.println();
 				break;
@@ -148,9 +149,9 @@ public class BankApplication {
 	}
 
 	private static void createSomeUsers(Bank bank) {
-		bank.addAccount("Person Ett", 123456);
-		bank.addAccount("Arvid Åkerblom", 911111111);
-		bank.addAccount("Douglas Algotsson", 1111111111);
+		bank.addAccount("Person Ett", 123456L);
+		bank.addAccount("Arvid Åkerblom", 8292293939L);
+		bank.addAccount("Douglas Algotsson", 1111111111L);
 
 	}
 
