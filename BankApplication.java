@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BankApplication { 
+public class BankApplication {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -58,9 +58,9 @@ public class BankApplication {
 				double out = scan.nextDouble();
 				if (a4.getAmount() >= out) {
 					a4.withdraw(out);
-				}
-				else {
-					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+				} else {
+					System.out
+							.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
 				}
 				System.out.println();
 				break;
@@ -87,9 +87,9 @@ public class BankApplication {
 				if (a5.getAmount() >= trade) {
 					a5.withdraw(trade);
 					A5.deposit(trade);
-				}
-				else {
-					System.out.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
+				} else {
+					System.out
+							.println("Det finns inte tillräckligt mycket pengar på kontot. Inga pengar har tagits ut.");
 				}
 				System.out.println();
 				break;
@@ -103,7 +103,7 @@ public class BankApplication {
 				System.out.println("Skriv in ditt id: ");
 				long l6 = scan.nextLong();
 				bank.addAccount(c6, l6);
-				System.out.println("Ditt konto är nu skapat, du har kontonummer: " + BankAccount.accountNrCount );
+				System.out.println("Ditt konto är nu skapat, du har kontonummer: " + BankAccount.accountNrCount);
 				System.out.println();
 				break;
 
@@ -147,12 +147,12 @@ public class BankApplication {
 		System.out.println("9. Avsluta");
 
 	}
-	
+
 	private static void createSomeUsers(Bank bank) {
 		bank.addAccount("Person Ett", 123456);
 		bank.addAccount("Arvid Åkerblom", 911111111);
 		bank.addAccount("Douglas Algotsson", 1111111111);
-		
+
 	}
 
 }
