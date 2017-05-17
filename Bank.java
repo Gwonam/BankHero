@@ -15,14 +15,14 @@ public class Bank {
 			addThisAccount = new BankAccount(findHolder(idNr));
 		}
 		accounts.add(addThisAccount);
-		
+
 		for (int i = 0; i < accounts.size() - 1; i++) {
-			if (accounts.get(i).getHolder().getName().compareTo(accounts.get(i+1).getHolder().getName()) > 0) {
-				accounts.set(i+1, accounts.set(i, accounts.get(i+1)));
+			if (accounts.get(i).getHolder().getName().compareTo(accounts.get(i + 1).getHolder().getName()) > 0) {
+				accounts.set(i + 1, accounts.set(i, accounts.get(i + 1)));
 				i = 0;
 			}
 		}
-		
+
 		return addThisAccount.getAccountNumber();
 	}
 
