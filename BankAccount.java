@@ -3,7 +3,7 @@ public class BankAccount {
 
 	private double balance = 0;
 	private Customer holder;
-	private static int accountNrCount = 1000;
+	public static int accountNrCount = 1000;
 	private int accountNr;
 
 	public BankAccount(String holderName, long holderId) {
